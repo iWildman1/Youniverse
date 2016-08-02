@@ -4,10 +4,6 @@ $(document).ready(function() {
     $(this).css('opacity', 0);
   })
 
-  $('.grid-item').each(function() {
-    $(this).css('width', 0).css('height', 0).css('opacity', 0);
-  })
-
   $('.main-tag').each(function(i) {
     $(this).delay((500 * i) + 200).velocity({
       top: '0px',
@@ -52,7 +48,7 @@ var portfolioTriggered = false;
 
 $(window).scroll(function() {
 
-  if($(window).scrollTop() > ($("#about").offset().top - 80)) {
+  if($(window).scrollTop() > ($(".main-body").offset().top - 80)) {
     outOfHeader = true;
   } else {
     outOfHeader = false;
@@ -67,40 +63,16 @@ $(window).scroll(function() {
     $('.menu-bar').removeClass('menu-main');
     showingScroller = false;
   }
-
-  var windowTop = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  var clientTop = $('.client-grid').offset().top;
-  var clientHeight = $('.client-grid').height();
-  var portfolioTop = $('.work-grid').offset().top;
-
-  if (windowTop > (clientTop - windowHeight + 70) && !clientTriggered) {
-    clientTriggered = true;
-    $('.client-grid').children().each(function(i) {
-      $(this).delay((i * 150) + 150).velocity({
-        opacity: 1
-      }, 300);
-    });
-  };
-
-  if (windowTop > (portfolioTop - windowHeight + 70) && !portfolioTriggered) {
-    portfolioTriggered = true;
-
-    $('.grid-item').each(function(i) {
-      $(this).delay(i * 400).velocity({
-        width: '50%',
-        height: '50%',
-        opacity: 1
-      }, "easeInOutQuint", 400)
-    })
-  }
 })
 
 //Handle Menu
 var menuOpen = false;
 
 $('.menu-handler').click(function(e) {
-  e.preventDefault();
+
+  if ($(this).hasClass('trigger')) {
+    e.preventDefault();
+  }
 
   if (!menuOpen) {
     $('.main-navigation').addClass('menu-visible');

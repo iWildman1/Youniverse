@@ -267,7 +267,7 @@ header {
     position: relative;
     text-align: center;
     top: 50%;
-    transform: translateY(calc(-50% - 73px));
+    transform: translateY(-50%);
   }
 }
 
@@ -493,6 +493,256 @@ footer {
     letter-spacing: 0.05em;
   }
 }
+
+.small-header {
+  height: 45vh;
+
+  &.header-work {
+    position: relative;
+    background: url(/img/grid_bg.jpg) center no-repeat;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(47, 47, 56, 0.8);
+    }
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+}
+
+#portfolio-list-grid {
+  margin-top: 30px;
+  text-align: center;
+
+  .list-grid-info {
+    margin-bottom: 30px;
+    p {
+      font-size: 16px;
+      color: #535458;
+    }
+  }
+
+  .list-grid-content {
+    img {
+      width: 100%;
+      min-width: 100%;
+    }
+
+    .row {
+      margin-bottom: 30px;
+    }
+
+    .grid-item {
+      position: relative;
+
+      .grid-item-info {
+        background-clip: content-box;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 0px 15px;
+        background-color: rgba(52,52,59, 0.88);
+        text-align: left;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        &.visible {
+          opacity: 1;
+        }
+
+        .info-container {
+          position: relative;
+          margin-left: 20px;
+          margin-top: 50px;
+          color: white;
+
+          h4 {
+            font-size: 30px;
+            opacity: 0;
+          }
+
+          .separator {
+            margin-top: 0;
+            opacity: 0;
+          }
+
+          p {
+            font-size: 16px;
+            color: rgba(white, 0.75);
+            opacity: 0;
+          }
+
+          .button {
+            opacity: 0;
+            padding: 5px 20px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-90 {
+  height: 95vh;
+}
+
+.header-port-single {
+  position: relative;
+  height: 95vh;
+  background-image: url(/img/grid_bg.jpg);
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(#292931, 0.8);
+  }
+
+  .header-info {
+    position: relative;
+    text-align: left;
+    transform: none;
+    left: 70px;
+    top: 55%;
+
+    h1 {
+      font-size: 80px;
+    }
+
+    button {
+      margin-top: 25px;
+    }
+  }
+}
+
+.portfolio-body {
+  margin-top: 50px;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .separator {
+    margin-bottom: 30px;
+  }
+
+  img {
+    width: 100%;
+    max-height: 500px;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-content-row {
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #3D3E45;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+
+  .portfolio-more-grid {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    .grid-item {
+      display: inline;
+      position: relative;
+      float: left;
+      width: 33.333333333333%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &:first-child {
+        background-image: url(/img/grid1.png);
+      }
+
+      &:nth-child(2) {
+        background-image: url(/img/grid2.png);
+      }
+
+      &:last-child {
+        background-image: url(/img/grid3.png);
+      }
+
+      .grid-item-info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left:0;
+        background-color: rgba(#292931, 0.8);
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        &.visible {
+          opacity: 1;
+        }
+
+        .info-container {
+          margin-top: 40px;
+          margin-left: 20px;
+        }
+
+        h4 {
+          opacity: 0;
+          font-size: 27px;
+        }
+
+        .separator {
+          opacity: 0;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+
+        p {
+          opacity: 0;
+          color: rgba(white, 0.75);
+        }
+
+        button {
+          opacity: 0;
+          margin-top: 15px;
+        }
+
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .max-height {
   height: 100%;

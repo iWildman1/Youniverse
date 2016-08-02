@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Youniverse</title>
 
-
-    <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
-
-
     <script src="https://use.typekit.net/ssq4rgm.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -28,10 +24,10 @@
   <body>
     <div class="main-navigation">
       <ul>
-        <li><a href="#top" class="menu-handler">Home</a></li>
+        <li><a href="/" class="menu-handler">Home</a></li>
         <li><a href="#about" class="menu-handler">About</a></li>
         <li><a href="#meet-the-team" class="menu-handler">Team</a></li>
-        <li><a href="#our-work" class="menu-handler">Work</a></li>
+        <li><a href="/workgrid.html" class="menu-handler">Work</a></li>
         <li><a href="#our-clients" class="menu-handler">Clients</a></li>
       </ul>
     </div>
@@ -42,9 +38,9 @@
           <div class="col-sm-12 navigation">
             <nav class="nav">
               <div class="brand">
-                <img src="/img/logo.png" alt="Youniverse Logo" />
+                <a href="/"><img src="/img/logo.png" alt="Youniverse Logo" /></a>
               </div>
-              <a class="pull-right menu-handler" href="#">
+              <a class="pull-right menu-handler trigger" href="#">
                 <div class="menu-clickbox">
                   <span class="nav-bar"></span>
                   <span class="nav-bar"></span>
@@ -73,7 +69,7 @@
       </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="main-body">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 about-heading">
@@ -303,5 +299,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/init.js"></script>
+    <script type="text/javascript" src="/js/animHome.js"></script>
   </body>
 </html>
