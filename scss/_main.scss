@@ -3,7 +3,7 @@
   src: url(/fonts/minionpro-regular-webfont.woff);
 }
 
-h1, h2, h3, h4, h5, h6, p, button, li, a {
+h1, h2, h3, h4, h5, h6, p, button, li, a, blockquote {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -595,9 +595,8 @@ footer {
   height: 100vh;
 }
 
-.header-port-single {
+.header-single {
   position: relative;
-  height: 100vh;
   background-image: url(/img/grid_bg.jpg);
 
   &:before {
@@ -612,10 +611,10 @@ footer {
 
   .header-info {
     position: relative;
-    text-align: left;
-    transform: none;
-    left: 70px;
-    top: 55%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     h1 {
       font-size: 80px;
@@ -624,6 +623,76 @@ footer {
     button {
       margin-top: 25px;
     }
+  }
+}
+
+.slider-row {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-control-container {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  .slider-controls {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+
+    transform: translateY(-50%);
+
+  }
+}
+
+.slider-control {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slider-container {
+  width: 300vw;
+  transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+
+  .slide {
+    display: inline-block;
+    width: 1170px;
+  }
+}
+
+.screen-container {
+  position: relative;
+  text-align: center;
+
+  .screen-overlay {
+    width: 505px;
+    height: 282px;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.portfolio-content-row {
+  margin-top: 50px;
+  text-align: center;
+
+  p {
+    font-family: 'source-sans-pro';
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  blockquote {
+    font-family: "minion-pro";
+    font-size: 22px;
   }
 }
 
@@ -636,27 +705,6 @@ footer {
 
   .separator {
     margin-bottom: 30px;
-  }
-
-  img {
-    width: 100%;
-    max-height: 500px;
-    margin-bottom: 20px;
-  }
-
-  .portfolio-content-row {
-    h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #3D3E45;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
   }
 
   .portfolio-more-grid {
