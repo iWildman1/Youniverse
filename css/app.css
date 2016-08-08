@@ -476,6 +476,7 @@ footer {
 
 .slider-container {
   width: 300vw;
+  padding: 0;
   -webkit-transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
           transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1); }
   .slider-container .slide {
