@@ -517,8 +517,13 @@ footer {
 }
 
 #portfolio-list-grid {
-  margin-top: 30px;
+  margin-top: 75px;
   text-align: center;
+
+  .grid-item {
+    margin: 0;
+    padding: 0;
+  }
 
   .list-grid-info {
     margin-bottom: 30px;
@@ -548,7 +553,6 @@ footer {
         height: 100%;
         top: 0;
         left: 0;
-        padding: 0px 15px;
         background-color: rgba(52,52,59, 0.88);
         text-align: left;
         opacity: 0;
@@ -560,12 +564,12 @@ footer {
 
         .info-container {
           position: relative;
-          margin-left: 20px;
-          margin-top: 50px;
+          margin-left: 8%;
+          margin-top: 10%;
           color: white;
 
           h4 {
-            font-size: 30px;
+            font-size: 60px;
             opacity: 0;
           }
 
@@ -669,15 +673,6 @@ footer {
 .screen-container {
   position: relative;
   text-align: center;
-
-  .screen-overlay {
-    width: 505px;
-    height: 282px;
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
 .portfolio-content-row {
@@ -778,6 +773,75 @@ footer {
         }
 
       }
+    }
+  }
+}
+
+.about-body {
+  margin-top: 40px;
+
+  .about-taglines {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 31px;
+    }
+
+    .separator {
+        margin-top: 0;
+    }
+
+    p {
+      font-size: 17px;
+      color: rgba(61, 62, 69, 0.75);
+    }
+  }
+
+  .about-history {
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      font-family: "source-sans-pro";
+      line-height: 1.6;
+    }
+  }
+
+  .team-header {
+    margin-top: 20px;
+    text-align: center;
+
+    h2 {
+      font-size: 31px;
+    }
+
+    .separator {
+        margin-top: 0;
+    }
+
+    p {
+      font-size: 17px;
+      color: rgba(61, 62, 69, 0.75);
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .about-team {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      font-size: 24px;
+      margin-bottom: 25px;
     }
   }
 }

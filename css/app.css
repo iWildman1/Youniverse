@@ -372,8 +372,11 @@ footer {
     font-size: 80px; }
 
 #portfolio-list-grid {
-  margin-top: 30px;
+  margin-top: 75px;
   text-align: center; }
+  #portfolio-list-grid .grid-item {
+    margin: 0;
+    padding: 0; }
   #portfolio-list-grid .list-grid-info {
     margin-bottom: 30px; }
     #portfolio-list-grid .list-grid-info p {
@@ -393,7 +396,6 @@ footer {
       height: 100%;
       top: 0;
       left: 0;
-      padding: 0px 15px;
       background-color: rgba(52, 52, 59, 0.88);
       text-align: left;
       opacity: 0;
@@ -403,11 +405,11 @@ footer {
         opacity: 1; }
       #portfolio-list-grid .list-grid-content .grid-item .grid-item-info .info-container {
         position: relative;
-        margin-left: 20px;
-        margin-top: 50px;
+        margin-left: 8%;
+        margin-top: 10%;
         color: white; }
         #portfolio-list-grid .list-grid-content .grid-item .grid-item-info .info-container h4 {
-          font-size: 30px;
+          font-size: 60px;
           opacity: 0; }
         #portfolio-list-grid .list-grid-content .grid-item .grid-item-info .info-container .separator {
           margin-top: 0;
@@ -486,15 +488,6 @@ footer {
 .screen-container {
   position: relative;
   text-align: center; }
-  .screen-container .screen-overlay {
-    width: 505px;
-    height: 282px;
-    position: absolute;
-    top: 22px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%); }
 
 .portfolio-content-row {
   margin-top: 50px;
@@ -563,6 +556,45 @@ footer {
         .portfolio-body .portfolio-more-grid .grid-item .grid-item-info button {
           opacity: 0;
           margin-top: 15px; }
+
+.about-body {
+  margin-top: 40px; }
+  .about-body .about-taglines {
+    text-align: center;
+    margin-bottom: 40px; }
+    .about-body .about-taglines h2 {
+      font-size: 31px; }
+    .about-body .about-taglines .separator {
+      margin-top: 0; }
+    .about-body .about-taglines p {
+      font-size: 17px;
+      color: rgba(61, 62, 69, 0.75); }
+  .about-body .about-history img {
+    max-width: 100%; }
+  .about-body .about-history p {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "source-sans-pro";
+    line-height: 1.6; }
+  .about-body .team-header {
+    margin-top: 20px;
+    text-align: center; }
+    .about-body .team-header h2 {
+      font-size: 31px; }
+    .about-body .team-header .separator {
+      margin-top: 0; }
+    .about-body .team-header p {
+      font-size: 17px;
+      color: rgba(61, 62, 69, 0.75);
+      margin-bottom: 20px; }
+  .about-body .about-team {
+    text-align: center; }
+    .about-body .about-team img {
+      max-width: 100%;
+      margin-bottom: 15px; }
+    .about-body .about-team h4 {
+      font-size: 24px;
+      margin-bottom: 25px; }
 
 .max-height {
   height: 100%; }
