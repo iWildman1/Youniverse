@@ -1,0 +1,40 @@
+@media screen and (max-width: 1199px) {
+  #our-clients {
+    .container {
+    width: 100%;
+    }
+  }
+
+  .portfolio-body {
+    .slider-container {
+      width: 500vh;
+
+      .slide {
+        width: 970px;
+      }
+    }
+
+    .slider-control-container {
+      opacity: 1;
+    }
+  }
+
+  .about-body {
+    .about-history {
+      .col-md-5 {
+        img {
+          width: 100%;
+          height: 100% !important;
+        }
+      }
+    }
+
+    .about-team {
+      .col-sm-6 {
+        img {
+          max-height: 300px;
+        }
+      }
+    }
+  }
+}

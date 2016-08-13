@@ -1,0 +1,39 @@
+@media screen and (max-width: 991px) {
+  .home-about-info {
+    text-align: center;
+  }
+
+  #portfolio-list-grid {
+    .info-container {
+      h4 {
+        font-size: 30px !important;
+      }
+
+      .separator {
+        margin-bottom: 5px !important;
+      }
+    }
+  }
+
+  .portfolio-body {
+    .slider-container {
+      .slide {
+        width: 750px;
+
+        img {
+          max-width: 75%;
+        }
+      }
+    }
+  }
+
+  .about-body {
+    .about-history {
+      img {
+        display: none;
+      }
+
+      text-align: center;
+    }
+  }
+}

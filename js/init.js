@@ -38,6 +38,22 @@ $(document).ready(function() {
   })
 })
 
+$('.grid-item-info').click(function() {
+  if ($(window).width() < 1200) {
+    $(this).addClass('visible');
+    $(this).children().children().each(function(i) {
+      $(this).delay(150 * i).animate({
+        opacity: 1
+      }, 300);
+    })
+    $(this).siblings().removeClass('visible');
+    $(this).siblings().children().each(function() {
+      $(this).stop(true, true);
+      $(this).css('opacity', '0');
+    })
+  }
+})
+
 //Show/Hide Top Scroller
 
 var outOfHeader = false;
@@ -105,11 +121,34 @@ var sliderTracker = 1;
 var sliderValue = 1170;
 var moveAllowed = false;
 var amountOfSlides = $('.slider-container').children().length;
+var currentWidth = $(window).width();
 
 $(".slider-control").click(function() {
 
+  //Detect Scroll Distance
+
+  currentWidth = $(window).width()
+
+  switch(true) {
+    case (currentWidth >= 1200):
+      sliderValue = 1170;
+      console.log('set large');
+      break;
+    case (currentWidth < 1200 && currentWidth >= 992):
+      sliderValue = 970;
+      console.log('set med');
+      break;
+    case (currentWidth < 992 && currentWidth >= 768 ):
+      sliderValue = 750;
+      console.log('set small');
+      break;
+    default:
+      sliderValue = ($(window).width() - 30);
+      console.log('set default');
+      break;
+  }
+
   if ($(this).hasClass('control-left')) {
-    sliderValue = 1174;
     if (sliderTracker - 1 > 0) {
       moveAllowed = true;
       sliderTracker--;
@@ -117,7 +156,7 @@ $(".slider-control").click(function() {
       moveAllowed = false;
     }
   } else {
-    sliderValue = -1174;
+    sliderValue = -(sliderValue);
     if (sliderTracker + 1 <= amountOfSlides) {
       moveAllowed = true;
       sliderTracker++;
@@ -134,17 +173,21 @@ $(".slider-control").click(function() {
 })
 
 $(".slider-row").mouseenter(function() {
-  $(".slider-control-container").animate({
-    top: "50%",
-    opacity: 1
-  }, 400);
+  if ($(window).width() >= 1200 ) {
+    $(".slider-control-container").animate({
+      top: "50%",
+      opacity: 1
+    }, 400);
+  }
 })
 
 $(".slider-row").mouseleave(function() {
-  $(".slider-control-container").animate({
-    top: "55%",
-    opacity: 0
-  }, 400);
+  if ($(window).width() >= 1200 ) {
+    $(".slider-control-container").animate({
+      top: "55%",
+      opacity: 0
+    }, 400);
+  }
 })
 
 //Smooth scroll
